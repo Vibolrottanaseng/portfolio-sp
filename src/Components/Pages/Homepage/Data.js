@@ -9,7 +9,7 @@ export const homeObjOne = {
   buttonLabel: 'Try It Out',
   imgStart: '',
   img: 'images/character.svg',
-  alt: 'Credit Card'
+  alt: 'character'
 };
 
 export const homeObjTwo = {
@@ -22,7 +22,7 @@ export const homeObjTwo = {
   // 'We have you covered no matter where you are located. Over 140 locations worldwide to ensure you have access anytime',
   buttonLabel: 'Learn More',
   imgStart: '',
-  img: 'images/security.svg',
+  img: 'images/character.svg',
   alt: 'Vault'
 };
 
