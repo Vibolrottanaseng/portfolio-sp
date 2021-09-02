@@ -4,7 +4,7 @@ import Home from './Components/Pages/Homepage/Home';
 import Services from './Components/Pages/Services/Services';
 import Products from './Components/Pages/Products/Products';
 import SignUp from './Components/Pages/SignUp/SignUp';
-import SignIn from './Components/Pages/SignIn/SignIn';
+import Login from './Components/Pages/SignIn/SignIn';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Pages/Footer/Footer';
@@ -23,7 +23,7 @@ function App() {
                 <Route path='/services' component={Services} />
                 <Route path='/products' component={Products} />
                 <Route path='/sign-up' component={SignUp} />
-                <Route path='/sign-in' component={SignIn} />
+                <Route path='/sign-in' component={Login} />
 
             </Switch>
             <Footer />
