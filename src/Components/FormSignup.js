@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import validate from './ValidateInfo';
 import useForm from './useForm';
 import './Form.css';
@@ -8,6 +8,29 @@ const FormSignup = ({ submitForm }) => {
         submitForm,
         validate
     );
+
+    const [click, setClick] = useState(false);
+    const [button, setButton] = useState(true);
+   
+
+  
+    const closeMobileMenu = () => setClick(false);
+
+    const showButton = () => {
+        if (window.innerWidth <= 960) {
+            setButton(false);
+        } else {
+            setButton(true);
+        }
+    };
+
+    useEffect(() => {
+        showButton();
+        window.addEventListener('resize', showButton);
+        return () => {
+            window.removeEventListener('resize', showButton);
+        }
+    }, [])
 
     return (
         <div className='form-content-right'>
@@ -68,7 +91,9 @@ const FormSignup = ({ submitForm }) => {
                     Sign up
                 </button>
                 <span className='form-input-login'>
-                    Already have an account? Login <a href=' # '>here</a>
+                   Already have an account? Login <a href='/sing-in'>here</a>
+                                        
+                             
                 </span>
             </form>
         </div>
