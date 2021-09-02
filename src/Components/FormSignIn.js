@@ -6,7 +6,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import {textfield_label} from '../App.css'
 
 
-const SignIn=()=>{
+const Login=()=>{
 
     
 
@@ -51,4 +51,4 @@ const SignIn=()=>{
     )
 }
 
-export default SignIn
+export default Login
