@@ -14,27 +14,7 @@ function Footer() {
     return (
         <div className='footer-container'>
 
-            <div className='footer-links'>
-                <div className='footer-link-wrapper'>
-                    <div className='footer-link-items'>
-
-                        <Link to='/sign-up'>Templates</Link>
-
-                    </div>
-                    <div className='footer-link-items'>
-
-                        <Link to='/'>About Us</Link>
-
-                    </div>
-                </div>
-                <div className='footer-link-wrapper'>
-                    <div className='footer-link-items'>
-
-                        <Link to='/'>Our Team</Link>
-
-                    </div>
-                </div>
-            </div>
+            
             <section className='social-media'>
                 <div className='social-media-wrap'>
                     <div className='footer-logo'>
