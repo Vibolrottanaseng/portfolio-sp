@@ -3,7 +3,7 @@ import { Grid,Paper, Avatar, TextField, Button, Typography,Link } from '@materia
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import {textfield_label} from '../App.css'
+
 
 
 const SignIn=()=>{
@@ -24,7 +24,7 @@ const SignIn=()=>{
                     <h2>Sign In</h2>
                 </Grid>
                 <div className="TextFieldContainer">
-                  <TextField required id="standard-required" placeholder='Enter Username' label="Username" InputLabelProps={{className: textfield_label}} placeholder='Enter username' fullWidth required/>
+                  <TextField required id="standard-required" placeholder='Enter Username' label="Username" placeholder='Enter username' fullWidth required/>
                   <TextField required id="standard-required"  placeholder='Enter password' label="Password" type='password' fullWidth required/>
                 </div>
                   
