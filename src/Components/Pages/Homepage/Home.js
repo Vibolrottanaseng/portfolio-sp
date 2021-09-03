@@ -10,24 +10,22 @@ import { Link } from 'react-router-dom';
 
 
 function Home() {
-    
-    
-  
+
+
+
 
 
     return (
 
 
         <>
-            
-             
-                <HeroSection {...homeObjOne}> </HeroSection>
-                
-                <Templates />
-                <HeroSection {...homeObjThree} />
-                {/* <HeroSection {...homeObjTwo} /> */}
-                <HeroSection {...homeObjFour} />
-           
+
+
+            <HeroSection {...homeObjOne}> </HeroSection>
+            <Templates />
+            <HeroSection {...homeObjThree} />
+            <HeroSection {...homeObjFour} />
+
         </>
     );
 }
