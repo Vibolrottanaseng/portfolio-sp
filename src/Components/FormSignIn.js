@@ -57,6 +57,9 @@ const SignIn = () => {
                 <form onSubmit={handleLogin}>
 
 
+
+                    <TextField required id="standard-required" className="form-control" placeholder='Enter Username' label="Password" name="Username" type='Username' fullWidth />
+
                     <TextField required id="standard-required" className="form-control" placeholder='Enter password' label="Password" name="password" type='password' fullWidth />
 
 
