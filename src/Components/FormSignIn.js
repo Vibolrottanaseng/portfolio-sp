@@ -77,12 +77,9 @@ const SignIn=()=>{
                     }
                     label="Remember me"
                  />
-<<<<<<< HEAD
                 <Button type='submit' variant="contained" style={btnstyle} fullWidth>  Sign in</Button>
-=======
                 <Button type='submit' variant="contained" style={btnstyle} fullWidth>Sign in</Button>
                 
->>>>>>> 32b12306e637306c9de73636402da060436732b8
                 <Typography >
                      <Link href="/forgot-password" style={link}>
                         Forgot password ?
