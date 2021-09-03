@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Pages/Footer/Footer';
 import { AuthProvider } from './contexts/AuthContext';
-import Login from './Components/FormSignIn';
+import Login from './Components/Pages/SignIn/SignIn';
 /*import Form from './Components/Form';*/
 
 /*import Pro from './Components/ProTemp/Pro1';

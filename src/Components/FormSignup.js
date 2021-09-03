@@ -12,9 +12,9 @@ const FormSignup = ({ submitForm }) => {
 
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
-   
 
-  
+
+
     const closeMobileMenu = () => setClick(false);
 
     const showButton = () => {
@@ -32,7 +32,7 @@ const FormSignup = ({ submitForm }) => {
             window.removeEventListener('resize', showButton);
         }
     }, [])
-  
+
     return (
         <div className='form-content-right'>
             <form onSubmit={handleSubmit} className='form' noValidate>
@@ -92,9 +92,9 @@ const FormSignup = ({ submitForm }) => {
                     Sign up
                 </button>
                 <span className='form-input-login'>
-                   Already have an account? Login <a href='/sign-in'>here</a>
-                                        
-                             
+                    Already have an account? Login <a href='sign-in'>here</a>
+
+
                 </span>
             </form>
         </div>
