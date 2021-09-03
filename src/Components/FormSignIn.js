@@ -35,9 +35,9 @@ const SignIn=()=>{
                     }
                     label="Remember me"
                  />
-                <Button type='submit' variant="contained" style={btnstyle} fullWidth>Sign in</Button>
+                <Button type='submit' variant="contained" style={btnstyle} fullWidth>  Sign in</Button>
                 <Typography >
-                     <Link href="/forgotpassword" style={link}>
+                     <Link href="/forgot-password" style={link}>
                         Forgot password ?
                     </Link>
                 </Typography>
