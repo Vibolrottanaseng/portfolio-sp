@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { FaPinterestP } from 'react-icons/fa';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
+import firebaseConfig from '../firebase';
+import { AuthContext } from '../contexts/AuthContext';
+import { Redirect } from 'react-router';
 
 function Navbar() {
     const [click, setClick] = useState(false);
@@ -29,9 +32,17 @@ function Navbar() {
         }
     }, [])
 
+  
+    const {currentUser} = useContext(AuthContext);
+   
+
+    if (!currentUser){
+        return <Redirect to='sign-in' />
+    }
 
     return (
         <>
+       
             <IconContext.Provider value={{ color: '#2CE080' }}>
                 <nav className='navbar'>
                     <div className='navbar-container container'>
@@ -68,11 +79,11 @@ function Navbar() {
                             </li>
                             <li className='nav-btn'>
                                 {button ? (
-                                    <Link to='/sign-up' className='btn-link'>
+                                    <Link to={'/sign-up'} className='btn-link'>
                                         <Button buttonStyle='btn--outline'>Get Started</Button>
                                     </Link>
                                 ) : (
-                                    <Link to='/sign-up' className='btn-link'>
+                                    <Link to={'/sign-up'} className='btn-link'>
                                         <Button
                                             buttonStyle='btn--outline'
                                             buttonSize='btn--mobile'
@@ -83,6 +94,21 @@ function Navbar() {
                                     </Link>
                                 )}
                             </li>
+                            <li className='nav-btn'>
+                                
+                                    
+                                        <Button buttonStyle='btn--outline' onClick={() => firebaseConfig.auth().signOut()}>Sign out</Button>
+                                    
+                               
+                            </li>
+                            
+                            
+                                
+                               
+                                   
+                                       
+                                
+                           
                             
                         </ul>
                     </div>

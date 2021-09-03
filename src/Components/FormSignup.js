@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import validate from './ValidateInfo';
 import useForm from './useForm';
 import './Form.css';
+
 
 const FormSignup = ({ submitForm }) => {
     const { handleChange, handleSubmit, values, errors } = useForm(
@@ -31,7 +32,7 @@ const FormSignup = ({ submitForm }) => {
             window.removeEventListener('resize', showButton);
         }
     }, [])
-
+  
     return (
         <div className='form-content-right'>
             <form onSubmit={handleSubmit} className='form' noValidate>

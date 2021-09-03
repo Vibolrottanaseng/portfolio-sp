@@ -14,7 +14,7 @@ function Templates() {
                 <div className='Templates__wrapper'>
                     <h1 className='Templates__heading'>Templates</h1>
                     <div className='Templates__container'>
-                        <Link to='/sign-up' className='Templates__container-card'>
+                        <Link to='/simple' className='Templates__container-card'>
                             <div className='Templates__container-cardInfo'>
                                 <div className='icon'>
                                     <FaFire />
@@ -32,7 +32,7 @@ function Templates() {
                                 </Button>
                             </div>
                         </Link>
-                        <Link to='/sign-up' className='Templates__container-card'>
+                        <Link to='/pro1' className='Templates__container-card'>
                             <div className='Templates__container-cardInfo'>
                                 <div className='icon'>
                                     <BsXDiamondFill />
@@ -50,7 +50,7 @@ function Templates() {
                                 </Button>
                             </div>
                         </Link>
-                        <Link to='/sign-up' className='Templates__container-card'>
+                        <Link to='/creative' className='Templates__container-card'>
                             <div className='Templates__container-cardInfo'>
                                 <div className='icon'>
                                     <GiCrystalize />
