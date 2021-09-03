@@ -33,13 +33,6 @@ function Navbar() {
     }, [])
 
   
-    const {currentUser} = useContext(AuthContext);
-   
-
-    if (!currentUser){
-        return <Redirect to='sign-in' />
-    }
-
     return (
         <>
        
@@ -95,14 +88,14 @@ function Navbar() {
                                     </Link>
                                 )}
                                 </li>
-                            {/*    
+                                
                             <li className='nav-btn'>
                                 
                                     
-                                        <Button buttonStyle='btn--outline' onClick={() => firebaseConfig.auth().signOut()}>Sign out</Button>
+                                    <Button buttonStyle='btn--outline' onClick={() => firebaseConfig.auth().signOut()}>Sign out</Button>
                                     
                                
-                            </li>*/}
+                            </li>
                             
                             
                                 
