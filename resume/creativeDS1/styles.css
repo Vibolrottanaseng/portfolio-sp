@@ -5,7 +5,10 @@
 	background-color:rgba(255, 255, 255, 1);
 	width:595px;
 	height:842px;
-	position:absolute;
+	position:relative;
+	margin: 50px auto;
+
+	
 }
 .container { 
 	width:167px;
@@ -13,6 +16,7 @@
 	position:absolute;
 	left:52px;
 	top:58px;
+
 }
 .name-box { 
 	background-color:rgba(144.00000661611557, 205.00000298023224, 244.0000006556511, 1);
