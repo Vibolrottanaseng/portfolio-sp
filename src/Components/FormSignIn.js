@@ -1,8 +1,13 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import { Grid,Paper, Avatar, TextField, Button, Typography,Link } from '@material-ui/core'
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
+import { AuthContext } from '../contexts/AuthContext';
+import firebaseConfig from '../firebase'
+import { Redirect } from 'react-router'
+import './Form.css';
+
 
 
 
@@ -14,18 +19,55 @@ const SignIn=()=>{
     const avatarStyle={backgroundColor:'#2CE080'}
     const btnstyle={margin:'8px 0',backgroundColor:'#2CE080',color:'black'}
     const link = {color:'#2CE080'}
+
+
     
+  
+    const handleLogin = (e) => {
+        e.preventDefault();
+        const { email, password } = e.target.elements;
+       
+        try {
+
+            firebaseConfig.auth().signInWithEmailAndPassword(email.value, password.value);
+        
+        } catch(error) {
+            alert(error);
+        }
+    }
+
+    const { currentUser } = useContext(AuthContext);
+    if (currentUser) {
+        return <Redirect to="/products" />;
+    }
+
+   
+
+   
+
     
     return(
         <Grid>
+            
             <Paper elevation={10} style={paperStyle}>
                 <Grid align='center'>
                      <Avatar style={avatarStyle}><LockOutlinedIcon/></Avatar>
                     <h2>Sign In</h2>
                 </Grid>
-                <div className="TextFieldContainer">
-                  <TextField required id="standard-required" placeholder='Enter Username' label="Username" placeholder='Enter username' fullWidth required/>
-                  <TextField required id="standard-required"  placeholder='Enter password' label="Password" type='password' fullWidth required/>
+                <form onSubmit={handleLogin}>
+            
+                <div className="form-label">
+                  <TextField 
+                    required id="standard-required" 
+                    className="form-control"
+                    placeholder='Enter Username' 
+                    label="Username" 
+                    name="email" 
+                    type='email' 
+                    placeholder='Enter username' 
+                    fullWidth required
+                  />
+                  <TextField required id="standard-required" className="form-control" placeholder='Enter password' label="Password" name="password" type='password' fullWidth required/>
                 </div>
                   
                 <FormControlLabel
@@ -35,7 +77,12 @@ const SignIn=()=>{
                     }
                     label="Remember me"
                  />
+<<<<<<< HEAD
                 <Button type='submit' variant="contained" style={btnstyle} fullWidth>  Sign in</Button>
+=======
+                <Button type='submit' variant="contained" style={btnstyle} fullWidth>Sign in</Button>
+                
+>>>>>>> 32b12306e637306c9de73636402da060436732b8
                 <Typography >
                      <Link href="/forgot-password" style={link}>
                         Forgot password ?
@@ -43,12 +90,13 @@ const SignIn=()=>{
                 </Typography>
             
                 <span >
-                   Not yet have an account? <a href='/sing-in' style={link}>here</a>            
+                   Not yet have an account? <a href='/sign-up' style={link}>here</a>            
                 </span>
-               
+                </form>
             </Paper>
+            
         </Grid>
     )
 }
 
-export default SignIn
+export default SignIn;
