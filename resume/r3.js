@@ -1,15 +1,18 @@
-var NewComponent = React.createClass({
-  render: function() {
+import React from 'react';
+import  './style3.css';
+
+  
+function r3 (){
     return (
       <div>
-        <meta charSet="utf-8" />
+  {/*      <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
         <meta name="HandheldFriendly" content="true" />
         <title>professional resume</title>
         <link rel="stylesheet" type="text/css" href="style3.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
-        <div className="wrapper">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossOrigin="anonymous" referrerPolicy="no-referrer" />*/}
+          <div className="wrapper">
           <div className="border">
             <div className="container">
               <div className="center">
@@ -179,7 +182,12 @@ var NewComponent = React.createClass({
               </div>
             </div>
           </div>
-        </div></div>
+        </div>
+        </div>
     );
-  }
-});
+
+};
+
+export default r3; 
+
+
