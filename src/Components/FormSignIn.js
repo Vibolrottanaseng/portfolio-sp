@@ -56,12 +56,18 @@ const SignIn = () => {
                 </Grid>
                 <form onSubmit={handleLogin}>
 
-
-
-                    <TextField required id="standard-required" className="form-control" placeholder='Enter Username' label="Username" name="Username" type='Username' fullWidth />
-
-                    <TextField required id="standard-required" className="form-control" placeholder='Enter password' label="Password" name="password" type='password' fullWidth />
-
+                    <div className="form-label">
+                        <TextField
+                            required id="standard-required"
+                            className="form-control"
+                            placeholder='Enter Username'
+                            label="Username"
+                            name="email"
+                            type='email'
+                            fullWidth required
+                        />
+                        <TextField required id="standard-required" className="form-control" placeholder='Enter password' label="Password" name="password" type='password' fullWidth required />
+                    </div>
 
                     <FormControlLabel
                         control={
