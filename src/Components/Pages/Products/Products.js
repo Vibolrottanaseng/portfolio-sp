@@ -21,10 +21,11 @@ function Products() {
         <>
         {currentUser? (
             
-           <> <HeroSection {...homeObjOne}></HeroSection>
-            <HeroSection {...homeObjTwo} /></>
+           <Redirect to="services"/>
         ):( 
-            <><HeroSection {...homeObjOne}></HeroSection><HeroSection {...homeObjTwo} /></>
+           
+            <> <HeroSection {...homeObjOne}></HeroSection>
+            <HeroSection {...homeObjTwo} /></>
         )}
         </>
     );

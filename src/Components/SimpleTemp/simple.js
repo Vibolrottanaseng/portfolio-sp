@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 function Simple(){
     return(
         <>
+        <div className="wrapper">
             <Card3 
             title="Simple Template 1"
             img={Simple1}/>
@@ -21,6 +22,7 @@ function Simple(){
             <Card3
             img={Simple3}
             title="Simple Template 3"/>
+            </div>
         </>
     );
 }

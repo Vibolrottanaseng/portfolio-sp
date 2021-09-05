@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 function Creative(){
     return(
         <>
+        <div className="wrapper">
             <Card2
             title="Creative Template 1"
             img={creative1}/>
@@ -19,12 +20,14 @@ function Creative(){
             <Card2
             
             title="Creative Template 2"/>
+            </div>
         </>
     );
 }
 
 function Card2(obj){
     return(
+        
         <div className="Card2">
             <div className="Card2_body">
                 <h2 className="Card2_title">{obj.title}</h2>       

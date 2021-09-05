@@ -10,17 +10,19 @@ import { Link } from 'react-router-dom';
 function Pro(){
     return(
         <>
+        <div className="wrapper">
             <Card 
-            title="Professional Template1"
+            title="Professional Template 1"
             img={Pro1}/>
             
             <Card
-            title="Professional Template2"
+            title="Professional Template 2"
             img={Pro2}
             />
             <Card
             img={Pro3}
-            title="Professional Template3"/>
+            title="Professional Template 3"/>
+            </div>
         </>
     );
 }
