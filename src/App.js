@@ -14,6 +14,7 @@ import Login from './Components/FormSignIn';
 import Pro from './Components/ProTemp/Pro1';
 import Creative from './Components/CreativeTemp/creative';
 import Simple from './Components/SimpleTemp/simple';
+import { Tabs } from 'material-ui';
 
 
 
@@ -32,6 +33,7 @@ function App() {
                     <Route path='/pro1' component={Pro} />
                     <Route path='/creative' component={Creative} />
                     <Route path='/simple' component={Simple} />
+                    <Route path='/Tabs' component={Tabs} />
 
 
 

@@ -3,7 +3,7 @@ import HeroSection from '../../HeroSection';
 import { homeObjOne, homeObjThree, } from './Data';
 import Pricing from '../../Templates';
 import Templates from '../../Templates';
-import SimpleTabs from '../../TabPanel';
+import Tabs from './Tab/Tabs'
 
 
 
@@ -11,7 +11,7 @@ function Services() {
 
     return (
         <>
-            <SimpleTabs />
+            <Tabs />
             <Templates />
 
 
