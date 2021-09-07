@@ -7,12 +7,21 @@ import Tabs from './Tab/Tabs'
 
 
 
+
 function Services() {
 
     return (
+<<<<<<< Updated upstream
         <>
             <Tabs />
+=======
+        <>  
+
+            
+>>>>>>> Stashed changes
             <Templates />
+         
+
 
 
 
