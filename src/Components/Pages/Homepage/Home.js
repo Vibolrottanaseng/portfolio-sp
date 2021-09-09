@@ -6,28 +6,28 @@ import { AuthContext } from '../../../contexts/AuthContext';
 import { Redirect } from 'react-router-dom';
 import firebaseConfig from '../../../firebase';
 import { Link } from 'react-router-dom';
-
+// import UserProfile from '../UserProfile/UserProfile';
 
 
 function Home() {
-    
-    
-  
+
+
+
 
 
     return (
 
 
         <>
-            
-             
-                <HeroSection {...homeObjOne}> </HeroSection>
-                
-                <Templates />
-                <HeroSection {...homeObjThree} />
-                {/* <HeroSection {...homeObjTwo} /> */}
-                <HeroSection {...homeObjFour} />
-           
+
+            {/* <UserProfile /> */}
+            <HeroSection {...homeObjOne}> </HeroSection>
+
+            <Templates />
+            <HeroSection {...homeObjThree} />
+            {/* <HeroSection {...homeObjTwo} /> */}
+            <HeroSection {...homeObjFour} />
+
         </>
     );
 }
