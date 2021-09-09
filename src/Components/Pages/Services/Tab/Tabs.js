@@ -5,6 +5,8 @@ import SecondTab from "./SecondTab";
 import ThirdTab from './ThirdTab';
 import FourthTab from './FourthTab';
 
+
+
 const Tabs = () => {
     const [activeTab, setActiveTab] = useState("tab1");
     const handleTab1 = () => {
@@ -24,14 +26,15 @@ const Tabs = () => {
     return (
         <div className="Tabs">
             {/* Tab nav */}
-            <ul className="nav">
 
+            <ul className="nav">
             <li
                 className={activeTab === "tab1" ? "active" : ""}
                 onClick={handleTab1}
             >
                  All Templates
              </li>
+            
              <li
                  className={activeTab === "tab2" ? "active" : ""}
                 onClick={handleTab2}
@@ -42,22 +45,18 @@ const Tabs = () => {
                 className={activeTab === "tab3" ? "active" : ""}
                 onClick={handleTab3}
             >
-                 All Templates
+                 Professional
              </li>
              <li
                  className={activeTab === "tab4" ? "active" : ""}
                 onClick={handleTab4}
             >
-                Simple
+                Creative
             </li>
-</ul>
+            </ul>
 
-          
-
-
-           
-            
             <div className="outlet">
+
                 {activeTab === "tab1" ? <FirstTab /> : <SecondTab />}
                 {activeTab === "tab2" ? <ThirdTab /> : <FourthTab />}
 

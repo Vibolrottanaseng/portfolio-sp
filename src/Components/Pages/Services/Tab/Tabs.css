@@ -3,7 +3,7 @@
   padding: 0;
   margin: 0;
 }
-// Style App.js wrapper
+Style App.js wrapper
 .App {
   width: 100vw;
   height: 100vh;
@@ -18,11 +18,13 @@
   width: 80%;
   height: auto;
   min-height: 400px;
-  background: #053742;
+  background: white;
   margin: 3.5rem auto 1.5rem;
   padding: 2rem 1rem;
   color: #E8F0F2;
-  border-radius: 2rem;
+  border: 1px solid #2CE080;
+  border-radius: 1rem;
+
   @media (max-width: 769px) {
     padding: 2rem 0;
   }
@@ -31,13 +33,14 @@
 
 /* Tab Navigation */
 ul.nav {
-  width: 60%;
+  width: 80%;
   margin: 0 auto 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid #39A2DB;
-  border-radius: 2rem;
+  border: 2px solid #2CE080;
+  background: #2CE080;
+  border-radius: 1rem;
   @media (max-width: 768px) {
     width: 90%;
   }
@@ -47,21 +50,24 @@ ul.nav li {
   padding: 1rem;
   list-style: none;
   text-align: center;
+  color: black;
   cursor: pointer;
   transition: all 0.7s;
-  border-bottom-left-radius: 2rem;
-  border-top-left-radius: 2rem;
+  border-radius: 1rem;
+
+  background: #2CE080;
+
 }
 ul.nav li:nth-child(4) {
-  border-radius: 0;
-  border-bottom-right-radius: 2rem;
-  border-top-right-radius: 2rem;
+  background: #2CE080;
+
 }
 ul.nav li:hover {
-  background: rgba(50, 224, 196, 0.15);
+  background: #2CE080;
+  
 }
 ul.nav li.active {
-  background: #39A2DB;
+  background: white;
 }
 
 /* First and Second Tab Styles */
