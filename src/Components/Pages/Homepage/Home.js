@@ -6,7 +6,8 @@ import { AuthContext } from '../../../contexts/AuthContext';
 import { Redirect } from 'react-router-dom';
 import firebaseConfig from '../../../firebase';
 import { Link } from 'react-router-dom';
-// import UserProfile from '../UserProfile/UserProfile';
+import UserProfile from '../../UserProfile';
+
 
 
 function Home() {
@@ -20,7 +21,7 @@ function Home() {
 
         <>
 
-            {/* <UserProfile /> */}
+      >
             <HeroSection {...homeObjOne}> </HeroSection>
 
             <Templates />
