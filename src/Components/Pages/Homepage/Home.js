@@ -21,7 +21,7 @@ function Home() {
 
         <>
 
-      >
+      
             <HeroSection {...homeObjOne}> </HeroSection>
 
             <Templates />

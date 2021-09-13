@@ -30,7 +30,7 @@ function Navbar() {
         return () => {
             window.removeEventListener('resize', showButton);
         }
-    }, [])
+    }, []);
 
   
     return (
