@@ -2,10 +2,25 @@ import React , {setState, useState} from 'react';
 import './UserProfile.css';
 import profile from './man.png';
 
+
 function UserProfile() {
-    const [isShown, setIsShown] = useState(false);
-    
+  /*  const [isShown, setIsShown] = useState(false);*/
+    const uploadedImage = React.useRef(null);
    
+    const handleImageUpload = e => {
+        const [file] = e.target.files;
+        if (file) {
+          const reader = new FileReader();
+          const {current} = uploadedImage;
+          current.file = file;
+          reader.onload = (e) => {
+              current.src = e.target.result;
+          }
+          reader.readAsDataURL(file);
+        }
+    };
+
+ 
     return (
         <>
             <div className='UserProfile__section'>
@@ -16,11 +31,11 @@ function UserProfile() {
                             <div className='UserProfile__container-cardInfo'>
                                 
                                 <div className='Userprofile__upload'>
-                                <img src={profile} id="photo" />   
-                                <input type="file" id="file"/>
+                                <img src={profile} ref={uploadedImage} id="photo" />   
+                                <input type="file" id="file" accept="image/*" onChange={handleImageUpload} multiple = "false"/>
                                 <label for="file" id="uploadBtn" 
-                                     onMouseEnter={() => setIsShown(true)}
-                                     onMouseLeave={() => setIsShown(false)}>
+                                    /* onMouseEnter={() => setIsShown(true)}
+                                     onMouseLeave={() => setIsShown(false)}*/>
                                          Choose Photo
                                 </label>
                         
