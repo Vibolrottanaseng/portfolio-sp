@@ -29,27 +29,20 @@ function UserProfile() {
                     <div className='UserProfile__container'>
                         <div className='UserProfile__container-card'>
                             <div className='UserProfile__container-cardInfo'>
-                                
-                                <div className='Userprofile__upload'>
-                                <img src={profile} ref={uploadedImage} id="photo" />   
-                                <input type="file" id="file" accept="image/*" onChange={handleImageUpload} multiple = "false"/>
-                                <label for="file" id="uploadBtn" 
-                                    /* onMouseEnter={() => setIsShown(true)}
-                                     onMouseLeave={() => setIsShown(false)}*/>
-                                         Choose Photo
-                                </label>
-                        
-                                
-                                    
-                                   
-                            </div>
-                               
-
                                 <h3>Hello, VIBOLROTTANA SENG</h3>
                                 <br></br>
-                               
                                 <br></br>
-                               
+                                <div className='Userprofile__upload'>
+                                    <img src={profile} ref={uploadedImage} id="photo" />   
+                                    <input type="file" id="file" accept="image/*" onChange={handleImageUpload} multiple = "false"/>
+                                    <label for="file" id="uploadBtn" >
+                                         Choose Photo
+                                    </label>
+                                </div>
+                                <div className='Personal__info'>
+                                    <input filter="[^a-zA-Z ]" name="firstName" placeholder="First Name"  />
+                                    <input filter="[^a-zA-Z ]" name="lastName" placeholder="Last Name"  />
+                                </div>
                             </div>
                         </div>
                         
