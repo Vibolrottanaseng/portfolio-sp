@@ -34,9 +34,6 @@ function App() {
                     <Route path='/creative' component={Creative} />
                     <Route path='/simple' component={Simple} />
                     <Route path='/Tabs' component={Tabs} />
-
-
-
                 </Switch>
                 <Footer />
             </Router>
